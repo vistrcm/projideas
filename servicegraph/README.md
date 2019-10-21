@@ -8,7 +8,7 @@ Sometimes it may be useful to visualize dependencies between different kubernete
 
 Example image:
 
-![our own dynamic DNS](./k8sconnections.png)
+![k8s connections](./k8sconnections.png)
 
 ## task
 
