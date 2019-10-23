@@ -8,7 +8,6 @@ May be useful to send message to shared Slack chat about deployment or to collec
 
 ![k8s lister](./k8slistener.png)
 
-
 ## High-level tasks
 
 Listener and filters should work separately, no need to re-deploy or restart plugins processes if the listener changed and vice versa.
@@ -16,7 +15,6 @@ Listener and filters should work separately, no need to re-deploy or restart plu
 One of the options to achieve this is to use gRPC and protocol buffers in particular.
 
 Important: unit tests should cover all functionality.
-
 
 ### protocol buffers definitions
 
@@ -43,6 +41,7 @@ Log plugin response for troubleshooting reasons.
 To avoid the necessity to create separate gRPC service and connection for each plugin, the listener should communicate with plugins via gRPC router. Please find a suitable router or implement one.
 
 Requirements:
+
 * route messages based on type. type=telegram -> telegram, type=elastic -> elastic
 * balance requests across multiple instances of a plugin
 * autodiscovery of new plugins and new instances of a plugin
