@@ -56,10 +56,13 @@ Write an appliction that implements Telegram integration. GRPC service which sen
 
 ### MS teams plugin
 
-
 Write an application that implements MS Teams integration. GRPC service sends messages to an MS Teams channel via webhook integration.
 
 ### elk plugin
 
 Write a plugin that stores all events to the ElasticSearch collection.
 Create a schema for the collection (see [An Introduction to Elasticsearch Mapping](https://www.elastic.co/blog/found-elasticsearch-mapping-introduction) for details).
+
+## code repository
+
+Create a GitHub repository (public or private) which contains source code and installation instructions.
