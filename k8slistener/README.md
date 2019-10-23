@@ -32,6 +32,8 @@ Filter rule examples:
 * deployment completed -> send to Slack chat
 * deployment event by user expert@org.com -> send to Telegram
 
+Filter rules may be defined via [kubernetes custom resources](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/).
+
 Plugins may be in the process of redeployment or network issue may cause an error.  The listener should implement retry logic with timing between retries changes according to exponential backoff. Make sure times are reasonable.
 
 Log plugin response for troubleshooting reasons.
