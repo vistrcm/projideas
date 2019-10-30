@@ -11,3 +11,4 @@ Repository to store some ideas on side projects.
 * [gcloud2im](gcloud2im/README.md) - read stream of notifications from [Google Cloud Status Dashboard](https://status.cloud.google.com/) and send notifications to the Slack or Telegram.
 * [cvclassifier](cvclassifier/README.md) - tool to help in recruitment process.
 * [k8slistener](k8slistener/README.md) - listen for k8s events, filter and pass to different channels.
+* [aptsearcher](aptsearcher/README.md) - system simplify apartment search.
