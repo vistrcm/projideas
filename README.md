@@ -12,3 +12,4 @@ Repository to store some ideas on side projects.
 * [cvclassifier](cvclassifier/README.md) - tool to help in recruitment process.
 * [k8slistener](k8slistener/README.md) - listen for k8s events, filter and pass to different channels.
 * [aptsearcher](aptsearcher/README.md) - system simplify apartment search.
+* [resourceadvisor](resourceadvisor/README.md) - kubernetes resource advisor.
