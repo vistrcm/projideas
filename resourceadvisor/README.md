@@ -40,6 +40,7 @@ Display tabular data with resource usage per pod and per deployment. The table s
 Table data is an average of the metric over a selected period.
 
 Average CPU data of a period of 24 hours.
+
 | Pod                                 | CPU limit | CPU requested | CPU usage | Delta                                      |
 |-------------------------------------|-----------|---------------|-----------|--------------------------------------------|
 | redis-5f856685f4-2xvv7              | 10000m    | 1000m         | 10m       | <span style="color:red">**+990m**</span>   |
