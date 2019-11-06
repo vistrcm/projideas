@@ -41,14 +41,14 @@ Display tabular data with resource usage per pod and per deployment. The table s
 
 Table data is an average of the metric over a selected period.
 
-Average CPU data of a period of 24 hours.
+CPU data of a period of 24 hours. Limit and requested should show current value.
 
-| Pod                                 | CPU limit | CPU requested | CPU usage | Delta                                      |
-|-------------------------------------|-----------|---------------|-----------|--------------------------------------------|
-| redis-5f856685f4-2xvv7              | 10000m    | 1000m         | 10m       | <span style="color:red">**+990m**</span>   |
-| test-consul-0                       | 1000m     | 100m          | 90m       | +10m                                       |
-| fluentd-gcp-v3.1.1-64hpg            | 1000m     | 100m          | 200m      | -100m                                      |
-| prometheus-adapter-5469c45b78-tbspx | 2000m     | 4000m         | 200m      | <span style="color:blue">**+3800m**</span> |
+| Pod                                 | Namespace   | CPU limit | CPU requested | average CPU usage | Delta                                      |
+|-------------------------------------|-------------|-----------|---------------|-------------------|--------------------------------------------|
+| redis-5f856685f4-2xvv7              | data        | 10000m    | 1000m         | 10m               | <span style="color:red">**+990m**</span>   |
+| test-consul-0                       | consul      | 1000m     | 100m          | 90m               | +10m                                       |
+| fluentd-gcp-v3.1.1-64hpg            | kube-system | 1000m     | 100m          | 200m              | -100m                                      |
+| prometheus-adapter-5469c45b78-tbspx | monitoring  | 2000m     | 4000m         | 200m              | <span style="color:blue">**+3800m**</span> |
 
 Add a similar table for Memory data.
 
