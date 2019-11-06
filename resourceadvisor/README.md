@@ -41,6 +41,15 @@ Display tabular data with resource usage per pod and per deployment. The table s
 
 Table data is an average of the metric over a selected period.
 
+High level overview can include per-namespace data. Sum of limit and requested and average of usage.
+
+| Namespace   | CPU limit | CPU requested | average CPU usage | Delta                                      |
+|-------------|-----------|---------------|-------------------|--------------------------------------------|
+| data        | 100000m   | 2000m         | 10m               | <span style="color:red">**+1990m**</span>  |
+| consul      | 2000m     | 300m          | 90m               | +210m                                      |
+| kube-system | 1500m     | 400m          | 200m              | +200m                                      |
+| monitoring  | 200000m   | 200m          | 1234m             | <span style="color:blue">**+1034m**</span> |
+
 CPU data of a period of 24 hours. Limit and requested should show current value.
 
 | Pod                                 | Namespace   | CPU limit | CPU requested | average CPU usage | Delta                                      |
