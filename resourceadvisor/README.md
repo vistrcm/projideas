@@ -52,12 +52,12 @@ High level overview can include per-namespace data. Sum of limit and requested a
 
 CPU data of a period of 24 hours. Limit and requested should show current value.
 
-| Pod                                 | Namespace   | CPU limit | CPU requested | average CPU usage | Delta                                      |
-|-------------------------------------|-------------|-----------|---------------|-------------------|--------------------------------------------|
-| redis-5f856685f4-2xvv7              | data        | 10000m    | 1000m         | 10m               | <span style="color:red">**+990m**</span>   |
-| test-consul-0                       | consul      | 1000m     | 100m          | 90m               | +10m                                       |
-| fluentd-gcp-v3.1.1-64hpg            | kube-system | 1000m     | 100m          | 200m              | -100m                                      |
-| prometheus-adapter-5469c45b78-tbspx | monitoring  | 2000m     | 200m          | 4000m             | <span style="color:blue">**-3800m**</span> |
+| Pod                                 | running | Namespace   | CPU limit | CPU requested | average CPU usage | Delta                                      |
+|-------------------------------------|---------|-------------|-----------|---------------|-------------------|--------------------------------------------|
+| redis-5f856685f4-2xvv7              | y       | data        | 10000m    | 1000m         | 10m               | <span style="color:red">**+990m**</span>   |
+| test-consul-0                       | n       | consul      | 1000m     | 100m          | 90m               | +10m                                       |
+| fluentd-gcp-v3.1.1-64hpg            | y       | kube-system | 1000m     | 100m          | 200m              | -100m                                      |
+| prometheus-adapter-5469c45b78-tbspx | y       | monitoring  | 2000m     | 200m          | 4000m             | <span style="color:blue">**-3800m**</span> |
 
 Add a similar table for Memory data.
 
