@@ -26,6 +26,8 @@ Data access component provides API representation of data operations.
 
 Which type of storage is better for the task? Try to compare at least three different types (please do not compare MySQL with PostgreSQL; they are the same type) of data storages and write pros and cons on paper. Separately create a list of requirements for the storage and compare these lists to figure out the best fit.
 
+Database types to consider: relational databases, key-value, document, time-series, etc.
+
 How often to store data? Please do back of the envelope calculations and provide an estimate of how much data storage required to store N samples.
 Based on this estimate, provide a suggestion on how often we should sample resource usage. Keep in mind that sampling should not miss short living (less than 30 minutes) jobs and spikes in CPU and memory usage.
 
@@ -39,14 +41,23 @@ Display tabular data with resource usage per pod and per deployment. The table s
 
 Table data is an average of the metric over a selected period.
 
-Average CPU data of a period of 24 hours.
+High level overview can include per-namespace data. Sum of limit and requested and average of usage.
 
-| Pod                                 | CPU limit | CPU requested | CPU usage | Delta                                      |
-|-------------------------------------|-----------|---------------|-----------|--------------------------------------------|
-| redis-5f856685f4-2xvv7              | 10000m    | 1000m         | 10m       | <span style="color:red">**+990m**</span>   |
-| test-consul-0                       | 1000m     | 100m          | 90m       | +10m                                       |
-| fluentd-gcp-v3.1.1-64hpg            | 1000m     | 100m          | 200m      | -100m                                      |
-| prometheus-adapter-5469c45b78-tbspx | 2000m     | 4000m         | 200m      | <span style="color:blue">**+3800m**</span> |
+| Namespace   | CPU limit | CPU requested | average CPU usage | Delta                                      |
+|-------------|-----------|---------------|-------------------|--------------------------------------------|
+| data        | 100000m   | 2000m         | 10m               | <span style="color:red">**+1990m**</span>  |
+| consul      | 2000m     | 300m          | 90m               | +210m                                      |
+| kube-system | 1500m     | 400m          | 200m              | +200m                                      |
+| monitoring  | 200000m   | 200m          | 1234m             | <span style="color:blue">**+1034m**</span> |
+
+CPU data of a period of 24 hours. Limit and requested should show current value.
+
+| Pod                                 | running | Namespace   | CPU limit | CPU requested | average CPU usage | Delta                                      |
+|-------------------------------------|---------|-------------|-----------|---------------|-------------------|--------------------------------------------|
+| redis-5f856685f4-2xvv7              | y       | data        | 10000m    | 1000m         | 10m               | <span style="color:red">**+990m**</span>   |
+| test-consul-0                       | n       | consul      | 1000m     | 100m          | 90m               | +10m                                       |
+| fluentd-gcp-v3.1.1-64hpg            | y       | kube-system | 1000m     | 100m          | 200m              | -100m                                      |
+| prometheus-adapter-5469c45b78-tbspx | y       | monitoring  | 2000m     | 200m          | 4000m             | <span style="color:blue">**-3800m**</span> |
 
 Add a similar table for Memory data.
 
