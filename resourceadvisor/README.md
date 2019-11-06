@@ -26,6 +26,8 @@ Data access component provides API representation of data operations.
 
 Which type of storage is better for the task? Try to compare at least three different types (please do not compare MySQL with PostgreSQL; they are the same type) of data storages and write pros and cons on paper. Separately create a list of requirements for the storage and compare these lists to figure out the best fit.
 
+Database types to consider: relational databases, key-value, document, time-series, etc.
+
 How often to store data? Please do back of the envelope calculations and provide an estimate of how much data storage required to store N samples.
 Based on this estimate, provide a suggestion on how often we should sample resource usage. Keep in mind that sampling should not miss short living (less than 30 minutes) jobs and spikes in CPU and memory usage.
 
