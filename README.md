@@ -13,3 +13,4 @@ Repository to store some ideas on side projects.
 * [k8slistener](k8slistener/README.md) - listen for k8s events, filter and pass to different channels.
 * [aptsearcher](aptsearcher/README.md) - system simplify apartment search.
 * [resourceadvisor](resourceadvisor/README.md) - kubernetes resource advisor.
+* [jiraarchview](jiraarchview/README.md) - Jira Archive Viewer.
